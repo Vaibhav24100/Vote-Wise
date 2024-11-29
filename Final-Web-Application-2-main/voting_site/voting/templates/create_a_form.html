@@ -1,0 +1,104 @@
+{% load static %}
+{% load custom_filters %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Voting Form</title>
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/sisperdotze" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/pierce" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/architect-s-daughter" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/mrs-beasley" type="text/css"/>
+
+    <style>
+        body{
+    background:#060c36;
+    color:#a2afde;
+  }
+
+ul li a{
+  text-decoration: none;
+    /* display: inline; */
+  color: #00F5FF;
+  margin: 2.5rem;
+  font-size: 2rem;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+    /* text-align: center; */
+  background: #020c54;
+  padding: 0.2px;
+  align-items: center;
+}
+li{
+    font-family: 'PierceRoman';
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+h1{
+   font-family: 'SisperdotzeRegular';
+   font-weight: normal;
+   font-style: normal;
+   text-align: center;
+   color:#00CCFF;
+}
+#title_font{
+   font-family: 'SisperdotzeRegular';
+   font-weight: normal;
+   font-style: normal;
+   color: #00CCFF;
+   font-size: 40px;
+   text-align: center;
+}
+
+    </style>
+</head>
+<body>
+
+
+
+
+<form method="post">
+    {% csrf_token %}
+    <center><h1>Voting App</h1></center>
+    <nav>
+    <ul>
+        <li><a href="https://vaibhav24100.github.io/Final-Web-Application-2/1_home_page.html">Home</a></li>
+        <li><a href="https://vaibhav085.pythonanywhere.com/voting/create/">Create a form</a></li>
+        <li><a href="https://vaibhav085.pythonanywhere.com/voting/vote/">Vote on a form</a></li>
+        <li><a href="https://vaibhav085.pythonanywhere.com/voting/result/">View Results</a></li>
+        <li><a href="https://vaibhav24100.github.io/Final-Web-Application-2/5_about.html">About Team</a></li>
+    </ul>
+    </nav>
+
+    <center><h1>Create Voting Form</h1></center>
+
+    <h3><label>Code: {{ code }}</label></h3>  <!-- This will show the generated code -->
+    {% for i in 3|range_filter %}  <!-- Use the custom filter here -->
+        <div>
+            <label for="question_{{ i }}">Designation {{ i|add:1 }}:</label>
+            <input type="text" id="question_{{ i }}" name="question_{{ i }}" value="{{ questions.i }}"><br><br>
+            <label for="option1_{{ i }}">Candidate 1:</label>
+            <input type="text" id="option1_{{ i }}" name="option1_{{ i }}" value="{{ options.i.0 }}"><br><br>
+            <label for="option2_{{ i }}">Candidate 2:</label>
+            <input type="text" id="option2_{{ i }}" name="option2_{{ i }}" value="{{ options.i.1 }}"><br><br>
+            <label for="option3_{{ i }}">Candidate 3:</label>
+            <input type="text" id="option3_{{ i }}" name="option3_{{ i }}" value="{{ options.i.2 }}"><br><br>
+            <label for="option4_{{ i }}">Candidate 4:</label>
+            <input type="text" id="option4_{{ i }}" name="option4_{{ i }}" value="{{ options.i.3 }}"><br><br><br><br>
+        </div>
+    {% endfor %}
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

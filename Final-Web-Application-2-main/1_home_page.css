@@ -1,0 +1,81 @@
+body{
+  background:#02183b;
+  color:#a2afde;
+}
+#headings{
+   font-family: 'SisperdotzeRegular';
+   font-weight: normal;
+   font-style: normal;
+   text-align: center;
+   color:#00CCFF;
+}
+
+h1 img{
+  height: 70px;
+  width: 70px;
+  margin-left: 10px;
+}
+
+ul li a{
+  text-decoration: none;
+  color: #00F5FF;
+  margin: 2rem;
+  font-size: 2rem;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  background: #020c54;
+  padding: 0.2px;
+  align-items: center;
+}
+li{
+   font-family: 'PierceRoman';
+   font-weight: normal;
+   font-style: normal;
+}
+#img1{
+  width: 1200px;
+  height: 750px;
+  background: #020c54;
+  padding: 20px;
+}
+#companies{
+  height: 200px;
+  width: 200px;
+  margin:10px;
+  padding: 20px;
+}
+p{
+  font-family: 'ArchitectsDaughterRegular';
+  font-weight: normal;
+  font-style: normal;
+}
+#topics{
+  background: #020c54;
+  width: 35%;
+  font-size: 25px;
+  font-family: 'MrsBeasleyRegular';
+   font-weight: bold;
+   font-style: normal;
+   color: #00CCFF;
+}
+.about_web{
+  margin-left: 10px;
+}
+.contact_us{
+
+  background: #020c54;
+  text-align: center;
+}
+#subheadings{
+  font-size: 25px;
+  font-family: 'MrsBeasleyRegular';
+   font-weight: bold;
+   font-style: normal;
+   text-align: center;
+}

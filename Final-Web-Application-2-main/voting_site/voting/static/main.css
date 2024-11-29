@@ -1,0 +1,26 @@
+body{
+    background-color: #060c36;
+    color:#a2afde;
+
+}
+
+ul {
+    list-style: none;
+    background-color: #020c54;
+    margin: 0;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    font-size: larger;
+}
+
+li a {
+    text-decoration: none;
+    color: greenyellow;
+    padding: 5px 10px;
+}
+
+h2{
+    color: greenyellow;
+}

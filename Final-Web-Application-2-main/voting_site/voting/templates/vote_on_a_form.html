@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Results</title>
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/sisperdotze" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/pierce" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/architect-s-daughter" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/mrs-beasley" type="text/css"/>
+
+    <style>
+       body{
+    background:#060c36;
+    color:#a2afde;
+  }
+
+ul li a{
+  text-decoration: none;
+    /* display: inline; */
+  color: #00F5FF;
+  margin: 2.5rem;
+  font-size: 2rem;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+    /* text-align: center; */
+  background: #020c54;
+  padding: 0.2px;
+  align-items: center;
+}
+li{
+    font-family: 'PierceRoman';
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+h1{
+   font-family: 'SisperdotzeRegular';
+   font-weight: normal;
+   font-style: normal;
+   text-align: center;
+   color:#00CCFF;
+}
+#title_font{
+   font-family: 'SisperdotzeRegular';
+   font-weight: normal;
+   font-style: normal;
+   color: #00CCFF;
+   font-size: 40px;
+   text-align: center;
+}
+    </style>
+</head>
+<body>
+
+<form method="post">
+    {% csrf_token %}
+    <center><h1>Voting App</h1></center>
+    <nav>
+    <ul>
+        <li><a href="https://vaibhav24100.github.io/Final-Web-Application-2/1_home_page.html">Home</a></li>
+        <li><a href="https://vaibhav085.pythonanywhere.com/voting/create/">Create a form</a></li>
+        <li><a href="https://vaibhav085.pythonanywhere.com/voting/vote/">Vote on a form</a></li>
+        <li><a href="https://vaibhav085.pythonanywhere.com/voting/result/">View Results</a></li>
+        <li><a href="https://vaibhav24100.github.io/Final-Web-Application-2/5_about.html">About Team</a></li>
+    </ul></nav><br>
+
+        <center><h1>Vote on a Form</h1></center>
+
+    <input type="text" name="code" placeholder="Enter code" value="{{ code }}">
+    <button type="submit">Submit Code</button>
+
+
+    {% if questions %}
+        <h3>Questions</h3>
+        {% for question in questions %}
+            <p>{{ question.text }}</p>
+            {% for option in question.option_set.all %}
+                <button type="submit" name="option_id" value="{{ option.id }}">
+                    {{ option.text }}
+                </button>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+
+    {% if message %}
+        <p style="color: green;">{{ message }}</p>
+    {% endif %}
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</form>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+body{
+  background:#060c36;
+  color:#a2afde;
+}
+#headings{
+  font-family: 'SisperdotzeRegular';
+   font-weight: normal;
+   font-style: normal;
+   text-align: center;
+   color:#00CCFF;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  /* text-align: center; */
+  background: #020c54;
+  padding: 0.2px;
+  align-items: center;
+}
+h1 img{
+  height: 70px;
+  width: 70px;
+  margin-left: 10px;
+}
+ul li a{
+  text-decoration: none;
+  color: #00F5FF;
+  margin: 2.5rem;
+  font-size: 2rem;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+}
+#title_font{
+   font-family: 'SisperdotzeRegular';
+   font-weight: normal;
+   font-style: normal;
+   color: #00CCFF;
+   font-size: 40px;
+   text-align: center;
+}
+h1{
+  text-align: center;
+}
+h2{
+  text-align: center;
+  font-family: 'PierceRoman';
+   font-weight: normal;
+   font-style: normal;
+}
+
+p{
+  margin: 20px;
+  font-family: 'ArchitectsDaughterRegular';
+  font-weight: normal;
+  font-style: normal;
+}
+.section1{
+  display: flex;
+  justify-content: space-between;
+}
+#written{
+
+  background: #020c54;
+  padding: 50px;
+  text-align:center;
+  height: 150px;
+  color:#CCF7FF;
+}
+li{
+   font-family: 'PierceRoman';
+   font-weight: normal;
+   font-style: normal;
+}
+/* AKSHAT */
+#akshat_img{
+
+  background: #020c54;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+}
+
+/* VINAMRA */
+#vinamra_img{
+
+  background: #020c54;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+}
+
+
+/* VAIBHAV */
+#vaibhav_img{
+
+  background: #020c54;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+}
+
+
+
+/* ADARSH */
+#adarsh_img{
+
+  background: #020c54;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+}
+
+
+/* CHATURYA */
+#chaturya_img{
+
+  background: #020c54;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+}
